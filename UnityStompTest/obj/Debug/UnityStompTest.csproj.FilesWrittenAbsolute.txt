@@ -1,0 +1,8 @@
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Debug/UnityStompTest.dll.mdb
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Debug/UnityStompTest.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/obj/Debug/UnityStompTest.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/obj/Debug/UnityStompTest.dll.mdb
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Debug/nunit.framework.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Debug/UnityStomp.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Debug/UnityStomp.dll.mdb
