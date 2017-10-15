@@ -2,7 +2,7 @@
 
 namespace UnityStomp
 {
-	public class Headers
+	public class StompHeaders
 	{
 		public static string CONTENT_LENGTH = "content-length";
 		public static string CONTENT_TYPE = "content-type";

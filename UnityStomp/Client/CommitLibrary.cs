@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UnityStomp.Client
+namespace UnityStomp
 {
 	public class CommitLibrary : Frame
 	{
-		public CommitLibrary (string body, Dictionary<string, string> headers) : base(ClientFrames.COMMIT, body, headers)
+		public CommitLibrary (string body, Dictionary<string, string> headers) : base(StompCommands.COMMIT, body, headers)
 		{
 		}
 
@@ -13,7 +13,7 @@ namespace UnityStomp.Client
 		{
 			base.validate ();
 
-			if (!headers.ContainsKey (Headers.TRANSACTION)) {
+			if (!Headers.ContainsKey (StompHeaders.TRANSACTION)) {
 				throw new ArgumentException ("The COMMIT frame has one REQUIRED header, transaction.");
 			}
 		}

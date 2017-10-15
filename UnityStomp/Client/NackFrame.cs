@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UnityStomp.Client
+namespace UnityStomp
 {
 	public class NackFrame : Frame
 	{
-		public NackFrame (string body, Dictionary<string, string> headers) : base(ClientFrames.NACK, body, headers) 
+		public NackFrame (string body, Dictionary<string, string> headers) : base(StompCommands.NACK, body, headers) 
 		{
 		}
 
@@ -13,7 +13,7 @@ namespace UnityStomp.Client
 		{
 			base.validate ();
 
-			if (!headers.ContainsKey (Headers.ID)) {
+			if (!Headers.ContainsKey (StompHeaders.ID)) {
 				throw new ArgumentException ("The NACK frame has one REQUIRED header, id.");
 			}
 

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UnityStomp.Client
+namespace UnityStomp
 {
 	public class SendFrame : Frame
 	{
 
-		public SendFrame (string body, Dictionary<string, string> headers) : base(ClientFrames.SEND, body, headers)
+		public SendFrame (string body, Dictionary<string, string> headers) : base(StompCommands.SEND, body, headers)
 		{
 		}
 
@@ -14,15 +14,15 @@ namespace UnityStomp.Client
 		{
 			base.validate ();
 
-			if (!string.IsNullOrEmpty(body)) {
+			if (!string.IsNullOrEmpty(Body)) {
 				throw new ArgumentException ("As per specification: Only the SEND, MESSAGE, and ERROR frames MAY have a body. All other frames MUST NOT have a body.");
 			}
 
-			if (!headers.ContainsKey (Headers.DESTINATION)) {
+			if (!Headers.ContainsKey (StompHeaders.DESTINATION)) {
 				throw new ArgumentException ("The SEND frame has REQUIRED header, destination.");
 			}
 
-			if (!headers.ContainsKey (Headers.ID)) {
+			if (!Headers.ContainsKey (StompHeaders.ID)) {
 				throw new ArgumentException ("The SEND frame has REQUIRED header, id.");
 			}
 

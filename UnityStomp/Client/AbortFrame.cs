@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UnityStomp.Client
+namespace UnityStomp
 {
 	public class AbortFrame : Frame
 	{
-		public AbortFrame (string body, Dictionary<string, string> headers) : base(ClientFrames.ABORT, body, headers) 
+		public AbortFrame (string body, Dictionary<string, string> headers) : base(StompCommands.ABORT, body, headers) 
 		{
 		}
 
@@ -13,7 +13,7 @@ namespace UnityStomp.Client
 		{
 			base.validate ();
 
-			if (!headers.ContainsKey (Headers.TRANSACTION)) {
+			if (!Headers.ContainsKey (StompHeaders.TRANSACTION)) {
 				throw new ArgumentException ("The ABORT frame has one REQUIRED header, transaction.");
 			}
 		}

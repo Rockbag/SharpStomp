@@ -4,3 +4,6 @@ UnityStomp/obj/
 UnityStompTest/UnityStompTest.csproj
 UnityStompTest/bin/
 UnityStompTest/obj/
+packages/
+*TestResult.xml
+*.userprefs

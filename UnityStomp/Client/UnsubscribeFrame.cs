@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 
 
-namespace UnityStomp.Client
+namespace UnityStomp
 {
 	public class UnsubscribeFrame : Frame
 	{
-		public UnsubscribeFrame (string body, Dictionary<string, string> headers) : base(ClientFrames.UNSUBSCRIBE, body, headers)
+		public UnsubscribeFrame (string body, Dictionary<string, string> headers) : base(StompCommands.UNSUBSCRIBE, body, headers)
 		{
 		}
 
 		protected override void validate ()
 		{
 			base.validate ();
-			if (!headers.ContainsKey (Headers.ID)) {
+			if (!Headers.ContainsKey (StompHeaders.ID)) {
 				throw new ArgumentException ("The UNSUBSCRIBE frame has one REQUIRED header, id.");
 			}		
 		}

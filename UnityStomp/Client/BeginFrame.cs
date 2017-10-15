@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UnityStomp.Client
+namespace UnityStomp
 {
 	public class BeginFrame : Frame
 	{
-		public BeginFrame (string body, Dictionary<string, string> headers) : base(ClientFrames.BEGIN, body, headers)
+		public BeginFrame (string body, Dictionary<string, string> headers) : base(StompCommands.BEGIN, body, headers)
 		{
 		}
 
@@ -13,7 +13,7 @@ namespace UnityStomp.Client
 		{
 			base.validate ();
 
-			if (!headers.ContainsKey (Headers.TRANSACTION)) {
+			if (!Headers.ContainsKey (StompHeaders.TRANSACTION)) {
 				throw new ArgumentException ("The BEGIN frame has one REQUIRED header, transaction.");
 			}
 
