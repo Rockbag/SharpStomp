@@ -78,7 +78,6 @@ for message propagation.";
 			StringAssert.AreEqualIgnoringCase ("malformed frame received", error.Headers ["message"]);
 			StringAssert.AreEqualIgnoringCase ("The message:\n-----\nMESSAGE\ndestined:/queue/a\nreceipt:message-12345\n\nHello queue a!\n-----\nDid not contain a destination header, which is REQUIRED\nfor message propagation.", error.Body);
 		}
-
 	}
 }
 
