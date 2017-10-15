@@ -21,7 +21,6 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -30,30 +29,40 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="WebSocket4Net">
+      <HintPath>Libs\WebSocket4Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ClientEngine">
+      <HintPath>Libs\SuperSocket.ClientEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Client\SendFrame.cs" />
-    <Compile Include="Client\ConnectFrame.cs" />
-    <Compile Include="Client\StompFrame.cs" />
-    <Compile Include="Client\SubscribeFrame.cs" />
-    <Compile Include="Client\UnsubscribeFrame.cs" />
-    <Compile Include="Client\AckFrame.cs" />
-    <Compile Include="Client\NackFrame.cs" />
-    <Compile Include="Client\BeginFrame.cs" />
-    <Compile Include="Client\CommitLibrary.cs" />
-    <Compile Include="Client\AbortFrame.cs" />
-    <Compile Include="Server\ServerFrameFactory.cs" />
-    <Compile Include="Frame.cs" />
-    <Compile Include="StompHeaders.cs" />
-    <Compile Include="StompCommands.cs" />
-    <Compile Include="Server\MessageFrame.cs" />
-    <Compile Include="Server\ReceiptFrame.cs" />
-    <Compile Include="Server\ErrorFrame.cs" />
+    <Compile Include="Stomp\Client\AbortFrame.cs" />
+    <Compile Include="Stomp\Client\AckFrame.cs" />
+    <Compile Include="Stomp\Client\BeginFrame.cs" />
+    <Compile Include="Stomp\Client\CommitLibrary.cs" />
+    <Compile Include="Stomp\Client\ConnectFrame.cs" />
+    <Compile Include="Stomp\Client\NackFrame.cs" />
+    <Compile Include="Stomp\Client\SendFrame.cs" />
+    <Compile Include="Stomp\Client\StompFrame.cs" />
+    <Compile Include="Stomp\Client\SubscribeFrame.cs" />
+    <Compile Include="Stomp\Client\UnsubscribeFrame.cs" />
+    <Compile Include="Stomp\Server\ErrorFrame.cs" />
+    <Compile Include="Stomp\Server\MessageFrame.cs" />
+    <Compile Include="Stomp\Server\ReceiptFrame.cs" />
+    <Compile Include="Stomp\Server\ServerFrameFactory.cs" />
+    <Compile Include="Stomp\Frame.cs" />
+    <Compile Include="Stomp\StompCommands.cs" />
+    <Compile Include="Stomp\StompHeaders.cs" />
+    <Compile Include="WebSocket\UnityStompClient.cs" />
+    <Compile Include="WebSocket\WebSocketPath.cs" />
+    <Compile Include="Stomp\Server\ConnectedFrame.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Client\" />
-    <Folder Include="Server\" />
+    <Folder Include="Libs\" />
+    <Folder Include="Stomp\" />
+    <Folder Include="WebSocket\" />
   </ItemGroup>
 </Project>
