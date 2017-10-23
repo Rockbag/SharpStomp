@@ -18,7 +18,7 @@ namespace SharpStompTest
 			headers.Add (StompHeaders.TRANSACTION, "transactionId");
 
             //test for null body
-			AbortFrame abortFrame = new AbortFrame (null, headers);
+			AbortFrame abortFrame = new AbortFrame (headers);
 		
 			StringAssert.AreEqualIgnoringCase(string.Format(MESSAGE_TEMPLATE,
 					"ABORT",
@@ -26,7 +26,7 @@ namespace SharpStompTest
 					"\0"),
 				abortFrame.AsStompMessage());
             //test for empty body
-            AbortFrame abortFrameEmptyBody = new AbortFrame("", headers);
+            AbortFrame abortFrameEmptyBody = new AbortFrame(headers);
 
 			StringAssert.AreEqualIgnoringCase(string.Format(MESSAGE_TEMPLATE,
 					"ABORT",
@@ -35,22 +35,7 @@ namespace SharpStompTest
 				abortFrameEmptyBody.AsStompMessage());
 
 		}
-
-		[Test()]
-		public void TestAbortFrameWithBody() 
-		{
-            Dictionary<string, string> headers = new Dictionary<string, string>();
-            headers.Add(StompHeaders.TRANSACTION, "transactionId");
-
-			Assert.Throws<ArgumentException> (() => new AbortFrame("some body", headers));
-        }
-
-		[Test()]
-		public void TestAbortFrameBodyWithMissingTransactionHeader() 
-		{
-            Assert.Throws<ArgumentException>(() => new AbortFrame("", null));
-            Assert.Throws<ArgumentException>(() => new AbortFrame("whatever body it is", null));
-        }
+			
 
         [Test(Description = "Checks if an Ack frame can be created with an empty/null body")]
         public void TestAckFrameEmptyBody()
@@ -76,15 +61,6 @@ namespace SharpStompTest
 				ackFrameEmptyBody.AsStompMessage());
         }
 
-        [Test(Description = "Checks that an Ack Frame is correctly serialiyed into a message")]
-        public void TestAckFrameWithBody()
-        {
-            Dictionary<string, string> headers = new Dictionary<string, string>();
-            headers.Add(StompHeaders.ID, "id");
-			Assert.Throws<ArgumentException> (() => new AckFrame ("some body", headers));
-            
-        }
-
         [Test(Description = "Checks validation logic for Ack frame")]
         public void TestAckFrameBodyWithMissingIdHeader()
         {
@@ -98,37 +74,21 @@ namespace SharpStompTest
 			Dictionary<string, string> headers = new Dictionary<string, string> ();
 			headers.Add (StompHeaders.TRANSACTION, "transactionId");
 
-			BeginFrame beginFrame = new BeginFrame ("", headers);
-			StringAssert.AreEqualIgnoringCase(beginFrame.AsStompMessage(),
-				string.Format(MESSAGE_TEMPLATE,
+			BeginFrame beginFrame = new BeginFrame (headers);
+			StringAssert.AreEqualIgnoringCase (beginFrame.AsStompMessage (),
+				string.Format (MESSAGE_TEMPLATE,
 					"BEGIN",
 					"transaction:transactionId",
 					"\0"));
 
-			BeginFrame beginFrameEmptyBody = new BeginFrame (null, headers);
-			StringAssert.AreEqualIgnoringCase(string.Format(MESSAGE_TEMPLATE,
-					"BEGIN",
-					"transaction:transactionId",
-					"\0"), 
-				beginFrameEmptyBody.AsStompMessage());
+			BeginFrame beginFrameEmptyBody = new BeginFrame (headers);
+			StringAssert.AreEqualIgnoringCase (string.Format (MESSAGE_TEMPLATE,
+				"BEGIN",
+				"transaction:transactionId",
+				"\0"), 
+				beginFrameEmptyBody.AsStompMessage ());
 
 		}
-
-		[Test()]
-		public void TestBeginFrameWithBody() {
-			Dictionary<string, string> headers = new Dictionary<string, string> ();
-			headers.Add (StompHeaders.TRANSACTION, "transactionId");
-
-			Assert.Throws<ArgumentException> (() => new BeginFrame ("some body", headers));
-
-		}
-
-		[Test()]
-		public void TestBeginFrameBodyWithMissingIdHeader() {
-			Assert.Throws<ArgumentException> (() => new BeginFrame ("", null));
-			Assert.Throws<ArgumentException> (() => new BeginFrame (null, null));
-		}
-
 
 	}
 }

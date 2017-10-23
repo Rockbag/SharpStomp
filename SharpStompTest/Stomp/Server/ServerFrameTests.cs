@@ -10,7 +10,7 @@ namespace SharpStompTest
 	{
 		[Test()]
 		public void MalformedReceiptFrame() {
-			Assert.Throws<ArgumentException> (() => new ReceiptFrame ("", new Dictionary<string, string>()));
+			Assert.Throws<ArgumentException> (() => new ReceiptFrame (new Dictionary<string, string>()));
 		}
 
 		[Test()]

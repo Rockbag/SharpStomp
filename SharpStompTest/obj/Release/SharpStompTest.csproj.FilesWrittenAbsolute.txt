@@ -26,3 +26,8 @@
 /Users/toe/.toe/dev/libs/SharpStomp/SharpStomp/SharpStompTest/bin/Release/Mono.Cecil.dll
 /Users/toe/.toe/dev/libs/SharpStomp/SharpStomp/SharpStompTest/bin/Release/nunit.engine.api.dll
 /Users/toe/.toe/dev/libs/SharpStomp/SharpStomp/SharpStompTest/bin/Release/Mono.Cecil.Rocks.dll
+/Users/toe/.toe/dev/libs/SharpStomp/SharpStomp/SharpStompTest/bin/Release/SharpStompTest.dll.mdb
+/Users/toe/.toe/dev/libs/SharpStomp/SharpStomp/SharpStompTest/bin/Release/SharpStompTest.dll
+/Users/toe/.toe/dev/libs/SharpStomp/SharpStomp/SharpStompTest/obj/Release/SharpStompTest.dll
+/Users/toe/.toe/dev/libs/SharpStomp/SharpStomp/SharpStompTest/obj/Release/SharpStompTest.dll.mdb
+/Users/toe/.toe/dev/libs/SharpStomp/SharpStomp/SharpStompTest/bin/Release/SharpStomp.dll
