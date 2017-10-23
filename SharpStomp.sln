@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpStomp", "SharpStomp\SharpStomp.csproj", "{FB075E14-CBCF-4163-B8FC-F719015C35EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpStompTest", "SharpStompTest\SharpStompTest.csproj", "{F6EBDD78-2936-45F7-9813-EC5DA8504545}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6EBDD78-2936-45F7-9813-EC5DA8504545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6EBDD78-2936-45F7-9813-EC5DA8504545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6EBDD78-2936-45F7-9813-EC5DA8504545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6EBDD78-2936-45F7-9813-EC5DA8504545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB075E14-CBCF-4163-B8FC-F719015C35EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB075E14-CBCF-4163-B8FC-F719015C35EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB075E14-CBCF-4163-B8FC-F719015C35EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB075E14-CBCF-4163-B8FC-F719015C35EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

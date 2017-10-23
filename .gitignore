@@ -1,9 +1,8 @@
-UnityStomp/bin/
-UnityStomp/obj/
+SharpStomp/bin/
+SharpStomp/obj/
 .vs/
-UnityStompTest/UnityStompTest.csproj
-UnityStompTest/bin/
-UnityStompTest/obj/
+SharpStompTest/bin/
+SharpStompTest/obj/
 packages/
 *TestResult.xml
 *.userprefs

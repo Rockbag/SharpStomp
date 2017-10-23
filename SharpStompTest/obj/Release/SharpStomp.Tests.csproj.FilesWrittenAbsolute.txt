@@ -1,0 +1,15 @@
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/UnityStompTest.dll.mdb
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/UnityStompTest.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/obj/Release/UnityStompTest.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/obj/Release/UnityStompTest.dll.mdb
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/nunit.framework.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/NUnit3.TestAdapter.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/nunit.engine.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/UnityStomp.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/UnityStomp.dll.mdb
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/NUnit.System.Linq.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/Mono.Cecil.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/nunit.engine.api.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/Mono.Cecil.Rocks.dll
+/Users/toe/.toe/dev/libs/UnityStomp/UnityStomp/UnityStompTest/bin/Release/websocket-sharp.dll
