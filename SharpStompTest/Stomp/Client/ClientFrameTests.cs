@@ -42,12 +42,7 @@ namespace SharpStompTest
             Dictionary<string, string> headers = new Dictionary<string, string>();
             headers.Add(StompHeaders.TRANSACTION, "transactionId");
 
-            AbortFrame abortFrame = new AbortFrame("some body", headers);
-            StringAssert.AreEqualIgnoringCase(string.Format(MESSAGE_TEMPLATE,
-                    "ABORT",
-                    "transaction:transactionId",
-                    "some body\0"),
-				abortFrame.AsStompMessage());
+			Assert.Throws<ArgumentException> (() => new AbortFrame("some body", headers));
         }
 
 		[Test()]
@@ -86,13 +81,8 @@ namespace SharpStompTest
         {
             Dictionary<string, string> headers = new Dictionary<string, string>();
             headers.Add(StompHeaders.ID, "id");
-
-            AckFrame ackFrame = new AckFrame("some body", headers);
-            StringAssert.AreEqualIgnoringCase(string.Format(MESSAGE_TEMPLATE,
-                    "ACK",
-                    "id:id",
-				"some body\0"),
-				ackFrame.AsStompMessage());
+			Assert.Throws<ArgumentException> (() => new AckFrame ("some body", headers));
+            
         }
 
         [Test(Description = "Checks validation logic for Ack frame")]
@@ -129,12 +119,8 @@ namespace SharpStompTest
 			Dictionary<string, string> headers = new Dictionary<string, string> ();
 			headers.Add (StompHeaders.TRANSACTION, "transactionId");
 
-			BeginFrame beginFrame = new BeginFrame ("some body", headers);
-			StringAssert.AreEqualIgnoringCase (string.Format (MESSAGE_TEMPLATE, 
-					"BEGIN",
-					"transaction:transactionId",
-					"some body\0"), 
-				beginFrame.AsStompMessage ());
+			Assert.Throws<ArgumentException> (() => new BeginFrame ("some body", headers));
+
 		}
 
 		[Test()]

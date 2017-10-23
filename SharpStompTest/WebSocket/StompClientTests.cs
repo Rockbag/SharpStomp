@@ -35,8 +35,7 @@ namespace SharpStompTest
 		[Test]
 		public void TestMessageHandlerIsWrappedCorrectl() {
 			WebSocketPath path = new WebSocketPath ("ws", "localhost", 6601, "Test");
-			List<Cookie> cookies = new List<Cookie> ();
-			client = StompClient.Over (path, cookies);
+			client = StompClient.Over (path, null);
 			client.OnMessage += onMessage;
 			Dictionary<string, string> headers = new Dictionary<string, string> ();
 			headers.Add (StompHeaders.DESTINATION, "/test");
@@ -59,7 +58,6 @@ namespace SharpStompTest
 			this.message = args.StompFrame;
 			messageArrived = true;
 		}
-
 
 		private class DummyEcho : WebSocketBehavior {
 
