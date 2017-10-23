@@ -20,6 +20,10 @@ namespace SharpStomp
 			if (!Headers.ContainsKey (StompHeaders.HOST)) {
 				throw new ArgumentException ("As per specification: STOMP 1.2 clients MUST set the host header");
 			}
+
+			if (!string.IsNullOrEmpty (Body)) {
+				throw new ArgumentException ("As per specification: Only the SEND, MESSAGE, and ERROR frames MAY have a body. All other frames MUST NOT have a body.");
+			}
 		}
 	}
 }

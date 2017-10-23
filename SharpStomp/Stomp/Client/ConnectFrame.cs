@@ -24,6 +24,10 @@ namespace SharpStomp
 			if (Headers.ContainsKey(StompHeaders.RECEIPT)) {
 				throw new ArgumentException ("Any client frame other than CONNECT MAY specify a receipt header with an arbitrary value.");
 			}	
+
+			if (!string.IsNullOrEmpty (Body)) {
+				throw new ArgumentException ("As per specification: Only the SEND, MESSAGE, and ERROR frames MAY have a body. All other frames MUST NOT have a body.");
+			}
 		}
 	}
 }

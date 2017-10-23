@@ -11,10 +11,16 @@ namespace SharpStomp
 
 		protected override void validate ()
 		{
+			base.validate ();
+
 			if (!Headers.ContainsKey (StompHeaders.ID)) {
 				throw new ArgumentException ("The SUBSCRIBE frame has one REQUIRED header, id.");
 			}
-			base.validate ();
+
+			if (!string.IsNullOrEmpty (Body)) {
+				throw new ArgumentException ("As per specification: Only the SEND, MESSAGE, and ERROR frames MAY have a body. All other frames MUST NOT have a body.");
+			}
+
 		}
 	}
 }

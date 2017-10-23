@@ -17,6 +17,10 @@ namespace SharpStomp
 				throw new ArgumentException ("The NACK frame has one REQUIRED header, id.");
 			}
 
+			if (!string.IsNullOrEmpty (Body)) {
+				throw new ArgumentException ("As per specification: Only the SEND, MESSAGE, and ERROR frames MAY have a body. All other frames MUST NOT have a body.");
+			}
+
 		}
 	}
 }

@@ -17,6 +17,10 @@ namespace SharpStomp
 			if (!Headers.ContainsKey (StompHeaders.VERSION)) {
 				throw new ArgumentException ("The MESSAGE frame has mulitple REQUIRED headers, destination and message-id.");
 			}
+
+			if (!string.IsNullOrEmpty (Body)) {
+				throw new ArgumentException ("As per specification: Only the SEND, MESSAGE, and ERROR frames MAY have a body. All other frames MUST NOT have a body.");
+			}
 		}
 	}
 }
